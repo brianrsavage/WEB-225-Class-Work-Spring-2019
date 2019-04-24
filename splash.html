@@ -5,62 +5,92 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Welcome to Slash</title>
+		<title>Welcome to Splash</title>
+
 		<style>
 			#hashSign {
 				position: fixed;
-				top: 40%;
+				width: 50%;
+				border: thin #333 solid;
+				box-sizing: border-box;
+				padding-top: 50%;
+				margin-left: 25%;
+				margin-top: 50%;
+				border-radius: 50%;
+				overflow: hidden;
+				animation: spin 25s infinite;
 			}
 
-
 			.intDiv {
-				border: red dashed thin;
-				position: relative;
-				width: 300px;
-				height: 30px;
-				margin: auto;
+				background-color: rgba(41, 45, 122, 0.5);
+				position: absolute;
 				transition: all 2s ease-in-out;
-				animation: zoomIn 5s linear 2s infinite alternate;
 			}
 
 			#intDiv001 {
-				background-color: #F00;
-				margin-top: -60px;
+				top: 25%;
+				animation: initDivH 1s 0s ease-in;
 			}
 
 			#intDiv002 {
-				background-color: #0F0;
-				margin-top: 60px;
+				bottom: 25%;
+				animation: initDivH 1s 0s ease-in;
+			}
+
+			#intDiv001,
+			#intDiv002 {
+				width: 100%;
+				height: 15%;
 			}
 
 			#intDiv003,
 			#intDiv004 {
-				height: 300px;
-				width: 30px;
-				/* margin-left: 75px; */
-				margin-top: -130px;
+				height: 100%;
+				width: 15%;
+				top: 0%;
 			}
 
 			#intDiv003 {
-				background-color: #00F;
-				margin-left: 85px;
+				left: 25%;
+				animation: initDivV 1s 0s ease-in;
 			}
 
 			#intDiv004 {
-				background-color: #000;
-				margin-left: 185px;
+				right: 25%;
+				animation: initDivV 1s 0s ease-in;
 			}
 
-			@keyframes zoomIn {
-				from {
-					background-color: red;
+			@keyframes initDivH {
+				0% {
+					left: -100%;
 				}
 
-				to {
-					background-color: yellow;
+				100% {
+					left: 0px;
+				}
+			}
+
+			@keyframes initDivV {
+				0% {
+					top: -100%;
+				}
+
+				100% {
+					top: 0px;
+				}
+			}
+
+			@keyframes spin {
+				0% {
+					transform: rotate(0deg);
+				}
+
+				100% {
+					transform: rotate(359deg);
 				}
 			}
 		</style>
+
 	</head>
 
 	<body>
