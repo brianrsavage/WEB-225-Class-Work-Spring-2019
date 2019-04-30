@@ -41,10 +41,15 @@ h1 {
 	}
 		#logoBar001 {
 			top: 25%;
-		}
+            /* placed animations seperate because eventually client would like them to slide in one at a time */
+            -webkit-animation: initDivH 1s 0s ease-in;
+                    animation: initDivH 1s 0s ease-in;		}
 		#logoBar002 {
 			bottom: 25%;
-		}
+            /* placed animations seperate because eventually client would like them to slide in one at a time */
+            -webkit-animation: initDivH 1s 0s ease-in;
+                    animation: initDivH 1s 0s ease-in;
+                		}
 
 	#logoBar003, #logoBar004 {
 		top: 0;
@@ -58,7 +63,14 @@ h1 {
 			right: 25%;
 		}
 
-
+        @-webkit-keyframes initDivH {
+            0% {left: -100%;}
+            100% {left: 0;}
+        }
+        @keyframes initDivH {
+            0% {left: -100%;}
+            100% {left: 0;}
+        }
 
 
 
